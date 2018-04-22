@@ -17,7 +17,7 @@
 </head>
 <body>
     <header class = "header">
-        <div class="header__main">
+        <div class="header__wrapper">
             <h1 class="header__branding">Sold.com</h1>
             <?php
                 if (isset($_SESSION['u_id'])) {

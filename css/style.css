@@ -97,7 +97,7 @@ h1 {
     background-color: #FFF;
 }
 
-.header__main {
+.header__wrapper {
     width: 90%;
     margin: 0 auto;
 }
@@ -367,7 +367,7 @@ h1 {
 }
 
 @media screen and (max-width:610px) {
-    .header__main {
+    .header__wrapper {
         width: 100%;
     }
     .header__nav ul {
