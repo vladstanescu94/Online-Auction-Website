@@ -42,9 +42,9 @@
             <ul>
                 <li><a href="index.php" class="highlight">Home</a></li>
                 <li><a href="auctions.php" class="highlight">Auctions</a></li>
-                <li><a href="">Fine Art</a></li>
-                <li><a href="">Jewelry</a></li>
-                <li><a href="">Collectibles</a></li>
+                <li><a href="fineart.php">Fine Art</a></li>
+                <li><a href="jewelry.php">Jewelry</a></li>
+                <li><a href="collectibles.php">Collectibles</a></li>
             </ul>
         </nav>
     </header>
