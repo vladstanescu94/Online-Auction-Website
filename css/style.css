@@ -293,6 +293,49 @@ h1 {
     margin-bottom: 10px;
 }
 
+/*Bids*/
+
+.bid__form{
+    width: 100%;
+    max-width:70%;
+    border: 1px solid #ccc;
+    margin: 20px auto;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.bid__data{
+    width: 100%;
+    margin-right: auto;
+    padding: 10px;
+}
+
+.bid__name{
+    font-size: 28px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.bid__image{
+    width: 150px;
+    height: 150px;
+}
+
+.bid__description{
+    font-size: 20px;
+    color: #95989A;
+    margin: 0;
+}
+
+.bid__toolbar{
+    width: 100%;
+}
+
+.bid__input{
+    height: 25px;
+}
+
 /*Media Q*/
 
 @media screen and (max-width:1051px) {
