@@ -3,7 +3,7 @@ session_start();
 include_once 'dbh.inc.php';
 if(isset($_POST['submit'])){
     if (isset($_SESSION['u_id'])) {
-        $value = $_POST['product_value'];
+        $value = mysqli_real_escape_string($conn,$_POST['product_value']);
         $pid =  $_POST['random_val'];
         $userid = $_SESSION['u_id'];
 
@@ -33,6 +33,15 @@ if(isset($_POST['submit'])){
 
 if(isset($_POST['delete'])){
     $pid =  $_POST['random_val'];
+    $sql = "SELECT * FROM products  WHERE products.product_id LIKE $pid";
+    $result = mysqli_query($conn, $sql);
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        $imagename = $row['product_image'];
+        $target_dir = "../img/products/";
+        $target_file = $target_dir . $imagename;
+        unlink($target_file);
+    }
     if($_SESSION['u_uid']=="admin"){
         $sql = "DELETE FROM products  WHERE products.product_id LIKE $pid";
         mysqli_query($conn, $sql);
@@ -42,4 +51,7 @@ if(isset($_POST['delete'])){
     else{
         exit();
     }
+} else {
+    header("Location: ../auctions.php?bid=error");
+    exit();
 }
