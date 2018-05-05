@@ -14,6 +14,13 @@
     <title>Sold | Official Website</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <?php 
+        if(isset($_SESSION['u_id'])){
+            if($_SESSION['u_uid']=="admin"){
+                echo '<link rel="stylesheet" href="css/style-admin.css">';
+            }
+        }
+    ?>
 </head>
 <body>
     <header class = "header">

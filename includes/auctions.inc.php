@@ -6,10 +6,10 @@ if(isset($_POST['submit'])){
     $descr = mysqli_real_escape_string($conn, $_POST['product_descr']);
     $image = $_POST['product_img'];
     $cat   = $_POST['product_cat'];
-    $value = $_POST['product_value'];
+    $value = mysqli_real_escape_string($conn,$_POST['product_value']);
     $userid = $_SESSION['u_id'];
 
-    if (empty($name) || empty($cat)){
+    if (empty($name) || empty($cat) || empty($value)){
         header("Location: ../auctions.php?prduct=empty");
         exit();
     } 

@@ -20,14 +20,21 @@
                             </div>
                             <div class="bid__toolbar">
                                 <p class="bid__bider">Current highest bidder :'.$row["user_first"].' </p>
-                                <p class="bid__value">Current value :'.$row["product_value"].'</p>
+                                <p class="bid__value">Current value :'.$row["product_value"].'$</p>';
+                    echo      ' <input type="hidden" class="bid__input" name="random_val" value='.$row["product_id"].'>
                                 <input type="text" class="bid__input" name="product_value" placeholder="Bid value">
-                                <button type="submit" name="submit" class="btn">Make a bid!</button>
-                            </div>    
-                            </form>';
-                }
+                                <button type="submit" name="submit" class="btn">Make a bid!</button>';
+                                if($_SESSION['u_uid']=="admin"){
+                                    echo '<button type="submit" name="delete" class="btn">Delete</button>
+                                            </div>    
+                                            </form>';  
+                                }else {
+                                    echo '</div>    
+                                            </form>';
+                                }
+                 }
             }
-            ?>
+        ?>
         </div>
     </section>
 
