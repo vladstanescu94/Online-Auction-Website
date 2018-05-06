@@ -84,13 +84,20 @@ h1 {
     margin: 0 auto;
     color: rgb(142, 216, 31);
     border: 1px solid rgb(142, 216, 31);
-    ;
 }
 
 .btn--center:hover {
     background-color: rgb(142, 216, 31);
-    ;
     color: white;
+}
+
+.btn.-color-red{
+    color: red;
+    border: 1px solid red;
+}
+.btn:hover.-color-red {
+    color: white;
+    background-color:  red;
 }
 
 /*Header*/
