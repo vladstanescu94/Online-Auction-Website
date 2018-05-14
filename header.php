@@ -14,10 +14,17 @@
     <title>Sold | Official Website</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <?php 
+        if(isset($_SESSION['u_id'])){
+            if($_SESSION['u_uid']=="admin"){
+                echo '<link rel="stylesheet" href="css/style-admin.css">';
+            }
+        }
+    ?>
 </head>
 <body>
     <header class = "header">
-        <div class="header__main">
+        <div class="header__wrapper">
             <h1 class="header__branding">Sold.com</h1>
             <?php
                 if (isset($_SESSION['u_id'])) {
@@ -42,9 +49,9 @@
             <ul>
                 <li><a href="index.php" class="highlight">Home</a></li>
                 <li><a href="auctions.php" class="highlight">Auctions</a></li>
-                <li><a href="">Fine Art</a></li>
-                <li><a href="">Jewelry</a></li>
-                <li><a href="">Collectibles</a></li>
+                <li><a href="fineart.php">Fine Art</a></li>
+                <li><a href="jewelry.php">Jewelry</a></li>
+                <li><a href="collectibles.php">Collectibles</a></li>
             </ul>
         </nav>
     </header>
