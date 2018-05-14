@@ -1,6 +1,6 @@
 <?php
     include_once 'header.php';
-    include_once '/includes/dbh.inc.php';
+    include_once '/opt/lampp/htdocs/proiectweb/includes/dbh.inc.php';
 ?>
 
 <section class="auctions">
