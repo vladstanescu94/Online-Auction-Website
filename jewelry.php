@@ -27,7 +27,7 @@
                         <button type="submit" name="submit" class="btn">Make a bid!</button>';
                         if (isset($_SESSION['u_id'])) {
                             if($_SESSION['u_uid']=="admin"){
-                                echo '<button type="submit" name="delete" class="btn">Delete</button>
+                                echo '<button type="submit" name="delete" class="btn -color-red">Delete</button>
                                         </div>    
                                         </form>';  
                             }else {
